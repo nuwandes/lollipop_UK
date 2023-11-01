@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/checkout_home.xml"
+    app:startDestination="@id/scnBarcodeFragment">
+
+    <fragment
+        android:id="@+id/scnBarcodeFragment"
+        android:name="org.nghru_uk.ghru.ui.consent.ScanBarcodeFragment"
+        android:label="ScanBarcodeFragment"
+        tools:layout="@layout/scan_barcode_patient_fragment">
+
+        <action
+            android:id="@+id/action_scanBarcodeFragment_to_consentFragment"
+            app:clearTask="true"
+            app:destination="@id/consentFragment"
+            app:launchSingleTop="true" />
+
+        <action
+            android:id="@+id/action_scanBarcodeFragment_to_manualScanFragment"
+            app:destination="@id/manualScanFragment"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/manualScanFragment"
+        android:name="org.nghru_uk.ghru.ui.consent.manualentry.ManualEntryConsentFragment"
+        android:label="ManualEntryFragment"
+        tools:layout="@layout/manual_entry_body_measurement_fragment">
+
+        <action
+            android:id="@+id/action_manualEntryFragment_to_consentFragment"
+            app:clearTask="true"
+            app:destination="@id/consentFragment"
+            app:launchSingleTop="true" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/consentFragment"
+        android:name="org.nghru_uk.ghru.ui.consent.upload.UploadConsentFragment"
+        android:label="UploadConsentFragment"
+        tools:layout="@layout/consent_fragment_new">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="org.nghru_uk.ghru.ui.camera.CameraFragment"
+        android:label="CameraFragment"
+        tools:layout="@layout/camera_fragment">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/cameraFragmentNew"
+        android:name="org.nghru_uk.ghru.ui.camera.CameraFragmentNew"
+        android:label="CameraFragmentNew"
+        tools:layout="@layout/camera_fragment_new">
+
+    </fragment>
+
+    <action
+        android:id="@+id/action_global_cameraFragment"
+        app:destination="@id/cameraFragment" />
+
+    <action
+        android:id="@+id/action_global_uploadConsentFragment"
+        app:destination="@id/consentFragment"
+        app:clearTask="true"/>
+
+    <action
+        android:id="@+id/action_global_cameraFragmentNew"
+        app:destination="@id/cameraFragmentNew" />
+
+</navigation>

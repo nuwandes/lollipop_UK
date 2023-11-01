@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/measurements"
+    app:startDestination="@id/scanBarcodeFragment">
+
+
+    <fragment
+        android:id="@+id/scanBarcodeFragment"
+        android:name="org.nghru_uk.ghru.ui.bodymeasurements.scanbarcodebp.ScanBarcodeFragment"
+        android:label="ScanBarcodeFragment"
+        tools:layout="@layout/scan_barcode_patient_fragment">
+
+        <action
+            android:id="@+id/action_scanBarcodeFragment_to_measurementsFragment"
+            app:clearTask="true"
+            app:destination="@id/pPManualOneFragment"
+            app:launchSingleTop="true" />
+        <action
+            android:id="@+id/action_scanBarcodeFragment_to_manualScanFragment"
+            app:destination="@id/manualScanFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/manualScanFragment"
+        android:name="org.nghru_uk.ghru.ui.bodymeasurements.manualentrybp.ManualEntryBodyMeasurement"
+        android:label="ScanBarcodeFragment"
+        tools:layout="@layout/manual_entry_body_measurement_fragment">
+        <action
+            android:id="@+id/action_manualScanFragment_to_measurementsFragment"
+            app:clearTask="true"
+            app:destination="@id/pPManualOneFragment"
+            app:launchSingleTop="true" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/pPManualOneFragment"
+        android:name="org.nghru_uk.ghru.ui.bodymeasurements.bpnew.manualone.BPManualOneFragment"
+        android:label="BPManualOneFragment"
+        tools:layout="@layout/b_p_manual_one_fragment_new">
+        <action
+            android:id="@+id/action_pPManualOneFragment_to_bPManualTwoFragment"
+            app:destination="@id/bPManualTwoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/bPManualTwoFragment"
+        android:name="org.nghru_uk.ghru.ui.bodymeasurements.bpnew.manualtwo.BPManualTwoFragment"
+        android:label="BPManualTwoFragment"
+        tools:layout="@layout/b_p_manual_two_fragment_new">
+
+    </fragment>
+
+
+</navigation>

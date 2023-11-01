@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="homeItem"
+            type="org.nghru_uk.ghru.vo.ParticipantStationItemNewNew" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/margin_24"
+        android:layout_marginEnd="@dimen/margin_24"
+        android:layout_marginStart="@dimen/margin_24">
+
+        <TextView
+            android:id="@+id/participant_id"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/icon_size"
+            android:layout_gravity="center"
+            android:text="@{homeItem.participant_id}"
+            android:textColor="#171717"
+            android:textSize="24sp"
+            tools:text="participant_id"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_seperator" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_seperator" />
+
+        <!--        first row -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dashboard_item_height"
+            android:orientation="horizontal"
+            android:weightSum="7.5"
+            android:paddingTop="@dimen/dashboard_item_padding"
+            android:paddingBottom="@dimen/dashboard_item_padding">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/screening_register_participant"
+                android:textColor="#171717"
+                android:textSize="@dimen/dashboard_item_font"/>
+
+            <ImageView
+                android:id="@+id/registerIcon"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dashboard_icon_height"
+                android:layout_weight="0.3"
+                android:contentDescription="@string/imageview"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.9"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="#171717"
+                android:textSize="@dimen/dashboard_item_font"
+                android:text="@string/screening_body_measurements"/>
+
+            <ImageView
+                android:id="@+id/bmIcon"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dashboard_icon_height"
+                android:layout_weight="0.3"
+                android:contentDescription="@string/imageview"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_seperator"/>
+
+        <!--        End of first row -->
+
+        <!--        Third row -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dashboard_item_height"
+            android:orientation="horizontal"
+            android:weightSum="7.5"
+            android:paddingTop="@dimen/dashboard_item_padding"
+            android:paddingBottom="@dimen/dashboard_item_padding">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/screening_biological_samples"
+                android:textColor="#171717"
+                android:textSize="@dimen/dashboard_item_font"/>
+
+            <ImageView
+                android:id="@+id/sampleIcon"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dashboard_icon_height"
+                android:layout_weight="0.3"
+                android:contentDescription="@string/imageview"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.9"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/ecg"
+                android:textColor="#171717"
+                android:textSize="@dimen/dashboard_item_font"/>
+
+            <ImageView
+                android:id="@+id/ecgIcon"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dashboard_icon_height"
+                android:layout_weight="0.3"
+                android:contentDescription="@string/imageview"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_seperator"/>
+
+        <!--        End of third row -->
+
+        <!--        Forth row -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dashboard_item_height"
+            android:orientation="horizontal"
+            android:weightSum="7.5"
+            android:paddingTop="@dimen/dashboard_item_padding"
+            android:paddingBottom="@dimen/dashboard_item_padding">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/spirometry"
+                android:textColor="#171717"
+                android:textSize="@dimen/dashboard_item_font"/>
+
+            <ImageView
+                android:id="@+id/spiroIcon"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dashboard_icon_height"
+                android:layout_weight="0.3"
+                android:contentDescription="@string/imageview"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.9"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/fundoscopy"
+                android:textColor="#171717"
+                android:textSize="@dimen/dashboard_item_font"/>
+
+            <ImageView
+                android:id="@+id/fundoIcon"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dashboard_icon_height"
+                android:layout_weight="0.3"
+                android:contentDescription="@string/imageview"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_seperator"/>
+
+        <!--        End of forth row -->
+
+        <!--        Fifth row -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dashboard_item_height"
+            android:orientation="horizontal"
+            android:weightSum="7.5"
+            android:paddingTop="@dimen/dashboard_item_padding"
+            android:paddingBottom="@dimen/dashboard_item_padding">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/bp_blood_pressure"
+                android:textColor="#171717"
+                android:textSize="@dimen/dashboard_item_font"/>
+
+            <ImageView
+                android:id="@+id/bpIcon"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dashboard_icon_height"
+                android:layout_weight="0.3"
+                android:contentDescription="@string/imageview"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.9"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="#171717"
+                android:textSize="@dimen/dashboard_item_font"
+                android:text="@string/activity_tracker"/>
+
+            <ImageView
+                android:id="@+id/axiIcon"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dashboard_icon_height"
+                android:layout_weight="0.3"
+                android:contentDescription="@string/imageview"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_seperator"/>
+
+        <!--        End of fifth row -->
+
+        <!--        sixth row -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dashboard_item_height"
+            android:orientation="horizontal"
+            android:weightSum="7.5"
+            android:paddingTop="@dimen/dashboard_item_padding"
+            android:paddingBottom="@dimen/dashboard_item_padding">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="#171717"
+                android:textSize="@dimen/dashboard_item_font"
+                android:text="@string/Intake_24_title"/>
+
+            <ImageView
+                android:id="@+id/intIcon"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dashboard_icon_height"
+                android:layout_weight="0.3"
+                android:contentDescription="@string/imageview"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.9"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="#171717"
+                android:textSize="@dimen/dashboard_item_font"
+                android:text="@string/screening_hlq_self"/>
+
+            <ImageView
+                android:id="@+id/pa_hlq_Icon"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dashboard_icon_height"
+                android:layout_weight="0.3"
+                android:contentDescription="@string/imageview"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_seperator"/>
+
+        <!--        End of sixth row -->
+
+        <!--        Seventh row -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dashboard_item_height"
+            android:orientation="horizontal"
+            android:weightSum="7.5"
+            android:paddingTop="@dimen/dashboard_item_padding"
+            android:paddingBottom="@dimen/dashboard_item_padding">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="#171717"
+                android:textSize="@dimen/dashboard_item_font"
+                android:text="@string/screening_checkout"/>
+
+            <ImageView
+                android:id="@+id/chkIcon"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dashboard_icon_height"
+                android:layout_weight="0.3"
+                android:contentDescription="@string/imageview"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.9"
+                android:layout_height="wrap_content"/>
+
+
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_seperator"/>
+
+        <!--        End of seventh row -->
+
+        <!--        Eight row -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dashboard_item_height"
+            android:orientation="horizontal"
+            android:weightSum="7.5"
+            android:paddingTop="@dimen/dashboard_item_padding"
+            android:paddingBottom="@dimen/dashboard_item_padding"
+            android:visibility="gone">
+
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.9"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="#171717"
+                android:textSize="@dimen/dashboard_item_font"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dashboard_icon_height"
+                android:layout_weight="0.3"
+                android:contentDescription="@string/imageview"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_seperator"/>
+
+        <!--        End of eighth row -->
+
+    </LinearLayout>
+
+
+</layout>
