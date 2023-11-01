@@ -38,10 +38,10 @@ android {
     signingConfigs {
         releaseCongig {
             try {
-                keyAlias 'nhealth'
-                keyPassword '1qaz2wsx'
-                storeFile file('nhealth.keystore')
-                storePassword 'Nhealth1234Store'
+                keyAlias 'fut'
+                keyPassword 'nghru123'
+                storeFile file('followUpNew.jks')
+                storePassword 'nghru123'
             }
             catch (ex) {
                 throw new InvalidUserDataException("You should define KEYSTORE_PASSWORD and KEY_PASSWORD in gradle.properties.")
@@ -51,21 +51,6 @@ android {
         }
     }
 
-    signingConfigs {
-        releaseCongig {
-            try {
-                keyAlias 'nhealth'
-                keyPassword '1qaz2wsx'
-                storeFile file('nhealth.keystore')
-                storePassword 'Nhealth1234Store'
-            }
-            catch (ex) {
-                throw new InvalidUserDataException("You should define KEYSTORE_PASSWORD and KEY_PASSWORD in gradle.properties.")
-            }
-        }
-        config {
-        }
-    }
     compileSdkVersion build_versions.target_sdk
     buildToolsVersion build_versions.build_tools
     defaultConfig {
@@ -126,6 +111,7 @@ android {
             buildConfigField "String", "client_secret", clientSecret
             buildConfigField "String", "client_id", "\"2\""
             resValue("string", "PORT_NUMBER", "8080")
+            signingConfig signingConfigs.releaseCongig
         }
 
         devsite {

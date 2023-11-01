@@ -69,7 +69,7 @@ class GuideMainFragment : Fragment(), Injectable {
         binding.viewModel = guideMainViewModel
         binding.participant = participant
 
-        binding.vidoeView.setVideoPath("android.resource://" + activity?.getPackageName() + "/" + R.raw.nuvoair);
+        //binding.vidoeView.setVideoPath("android.resource://" + activity?.getPackageName() + "/" + R.raw.nuvoair);
 //        mediaController = new MediaController(TestActivity.this);
 //        mediaController.setAnchorView(videoView);
 //        videoView.setMediaController(mediaController);
