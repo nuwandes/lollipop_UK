@@ -97,9 +97,9 @@ android {
 
         // commented after production server 02.03.2021 ---------------------------------------------------------
 
-        def serverUrl =  '\"' + (System.getenv("SERVER_URL")?: "https://nhealth-staging-uk.appspot.com/")+'\"'
+        //def serverUrl =  '\"' + (System.getenv("SERVER_URL")?: "https://nhealth-staging-uk.appspot.com/")+'\"'
 
-        //def serverUrl =  '\"' + (System.getenv("SERVER_URL")?: "https://admin.sabiobank.org/")+'\"'
+        def serverUrl =  '\"' + (System.getenv("SERVER_URL")?: "https://admin.sabiobank.org/")+'\"'
 
 
         // --------------------------------------------------------------------------------------------------------
