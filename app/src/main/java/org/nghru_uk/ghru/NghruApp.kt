@@ -77,34 +77,34 @@ class NghruApp : Application(), HasActivityInjector, LogoutDelegate {
     }
 
     override fun startTimer(context: Activity?) {
-//        if (logoutTimerTask != null) {
-//            logoutTimerTask?.cancel()
-//            logoutTimerTask = null
-//        }
-//        timerStarted = true
-//        logoutTimerTask = Timer("Log out", false).schedule(1*60*1000) {
-//
-//            val email = tokenManager.getEmail()
-//            tokenManager.deleteToken()
-//
-//            if (email != null) {
-//                val token = accessTokenDao.getTokerByEmailSync(email)
-//                if (token != null) {
-//                    token.status = false
-//                    accessTokenDao.logout(token)
-//
-//                    displaySessionExpireMsg(context)
-//                }
-//            }
-//
-////            context?.finish()
-//        }
+        if (logoutTimerTask != null) {
+            logoutTimerTask?.cancel()
+            logoutTimerTask = null
+        }
+        timerStarted = true
+        logoutTimerTask = Timer("Log out", false).schedule(15*60*1000) {
+
+            val email = tokenManager.getEmail()
+            tokenManager.deleteToken()
+
+            if (email != null) {
+                val token = accessTokenDao.getTokerByEmailSync(email)
+                if (token != null) {
+                    token.status = false
+                    accessTokenDao.logout(token)
+
+                    displaySessionExpireMsg(context)
+                }
+            }
+
+//            context?.finish()
+        }
     }
 
     override fun stopTimer() {
-//        logoutTimerTask?.cancel()
-//        logoutTimerTask = null
-//        timerStarted = false
+        logoutTimerTask?.cancel()
+        logoutTimerTask = null
+        timerStarted = false
     }
 
 //    override fun onAppBackgrounded() {
